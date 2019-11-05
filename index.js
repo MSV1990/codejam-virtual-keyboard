@@ -292,7 +292,7 @@ const htmlTemplate = `<canvas class="canvas">
         <div class="bottom"></div>
         <div class="back"></div>
     </div>
-    <div class="key-quote" data-key="Quote" data-en-shift=""" data-en = """ data-ru = "э" >"
+    <div class="key-quote" data-key="Quote" data-en-shift=""" data-en = "'" data-ru = "э" >"
         <div class="top"></div>
         <div class="left"></div>
         <div class="right"></div>
