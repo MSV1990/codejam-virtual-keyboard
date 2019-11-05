@@ -554,7 +554,8 @@ h1 {
     font-size: 2rem;
 }
 .canvas {
-    position: fixed;
+  height: 100%;
+  position: fixed;
 }
 .textarea{
   max-width: 1500px;

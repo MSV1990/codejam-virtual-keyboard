@@ -691,6 +691,7 @@ h1 {
 }
 
 .canvas {
+  height: 100%;
   position: fixed;
 }
 
