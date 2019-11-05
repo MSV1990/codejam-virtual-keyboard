@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 const htmlTemplate = `<canvas class="canvas">   
 </canvas>
 <div class="row">
@@ -608,10 +609,6 @@ function toLowerCase() {
   });
 }
 
-function countLines() {
-  return displayInput.value.substr(0, displayInput.selectionStart).split('\n').length;
-}
-
 function pressButton(inputType) {
   const dataKey = (this.dataset.key);
   if (inputType === 'virtualKeyboard') {
@@ -705,10 +702,6 @@ function pressButton(inputType) {
         } else {
           newCaretPosition = caretPosition + prevLineLength;
         }
-
-        console.warn(`caretPosition:${caretPosition} totalLength:${displayInput.value.length}
-        currentLength:${currentLength} currentLineLength:${currentLineLength}
-        prevLineLength:${prevLineLength} newCaretPosition:${newCaretPosition}`);
         if (caretPosition) {
           setCaretToPos(displayInput, newCaretPosition + 1);
         }
