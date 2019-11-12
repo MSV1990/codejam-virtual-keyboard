@@ -689,18 +689,18 @@ function pressButton(inputType) {
     let newCaretPosition;
     const lines = displayInput.value.split('\n');
     const linesAmount = lines.length;
-    let prevLineLength;
+    let nextLineLength;
     let currentLineLength;
-    let currentLength = lines[0].length;
-    for (let i = 1; i < linesAmount; i += 1) {
-      currentLength += lines[i].length + 1;
+    let currentLength = 0;
+    for (let i = 0; i < linesAmount; i += 1) {
+      currentLength += lines[i].length;
       currentLineLength = lines[i].length;
-      prevLineLength = lines[i - 1].length;
+      nextLineLength = lines[i + 1].length;
       if (currentLength >= caretPosition) {
-        if (currentLineLength < prevLineLength && caretPosition + prevLineLength > prevLineLength) {
-          newCaretPosition = currentLength - 1;
+        if (currentLineLength > nextLineLength) {
+          newCaretPosition = currentLength + nextLineLength;
         } else {
-          newCaretPosition = caretPosition + prevLineLength;
+          newCaretPosition = caretPosition + nextLineLength;
         }
         if (caretPosition) {
           setCaretToPos(displayInput, newCaretPosition + 1);
